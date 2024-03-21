@@ -13,7 +13,7 @@
             <a href="">
                 <img src="./logo.png" class="logo" />
             </a>
-            <a class="title" href="" style="color: #f0ab3c">Dog Breed Generator</a>
+            <a class="title" href="" style="color: #f0ab3c">KNN avg Generator</a>
         </div>
     </nav>
 
@@ -22,24 +22,29 @@
     <table>
         <tr>
             <td>Size</td>
-            <td><input type="text" style="border:3px solid #F7730E;" value="0" id="testInput1" /></td>
+            <td><input type="text" style="border:3px solid #F7730E;" value="1" id="testInput1" /></td>
             <td>Age</td>
-            <td><input type="text" style="border:3px solid #F7730E;" value="175" id="testInput2" /></td>
+            <td><input type="text" style="border:3px solid #F7730E;" value="1" id="testInput2" /></td>
             <td>Color</td>
-            <td><input type="text" style="border:3px solid #F7730E;" value="0" id="testInput3" /></td>
+            <td><input type="text" style="border:3px solid #F7730E;" value="0.5" id="testInput3" /></td>
             <td>Tongue-out</td>
             <td><input type="text" style="border:3px solid #F7730E;" value="0" id="testInput4" /></td>
         </tr>
     </table>
 
-    <button id="generate-btn" class="py-button">Generate</button>
+   <button id="get-time" py-click="my_gen_function()"  class="py-button">Generate</button>
+                                       
+       
+        <p id="current-val"></p>
+  
+        <div id="test-output"></div>
 
-    <p id="current-val"></p>
+        <div id="pandas-output"></div>
 
-    <div id="generated-image"></div>
+        
 
-    <section class="pyscript">
-        <div id="mpl"></div>
+        <section class="pyscript"> 
+            <div id="mpl"></div>
 
         <py-config>
             packages = [
