@@ -58,7 +58,7 @@
             from pyodide.http import open_url
             from js import console
             
-            url1 = "https://olubayoh1.github.io/My-ML-Class-repo/GenerativeKNN/PD_conditions_train.csv"
+            url1 = "https://olubayoh1.github.io/My-ML-Class-repo/GenerativeKNN/index.html/PD_conditions_train.csv"
             pd_ids_train = pd.read_csv(open_url(url1))
             pd_ids_train_np = pd_ids_train.to_numpy()[1:, 1:]
 
@@ -66,7 +66,7 @@
             pd_conditions_train = pd.read_csv(open_url(url2))
             pd_conditions_train_np = pd_conditions_train.to_numpy()[1:, 1:]
 
-            url3 = "https://olubayoh1.github.io/My-ML-Class-repo/GenerativeKNN/index.html/PD_imgs_np_train.csv"
+            url3 = "https://olubayoh1.github.io/My-ML-Class-repo/GenerativeKNN/index.html/PD_ids_train.csv"
             pd_imgs_np_train = pd.read_csv(open_url(url3))
             pd_imgs_np_train_np = pd_imgs_np_train.to_numpy()[1:, 1:]
 
