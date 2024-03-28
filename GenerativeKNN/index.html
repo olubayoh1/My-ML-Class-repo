@@ -125,44 +125,36 @@
 ##############################################################################################
             def my_gen_function():
                     
-                        test_x = get_np_conditions_vector()
+                test_x = get_np_conditions_vector()
 
-                        #####################################################
-                        text1 = str(pd_conditions_train_np.shape)
-                        text2 = str(pd_imgs_np_train_np.shape)
-                        text3 = str(pd_ids_train_np.shape)
-                        text4 = str(test_x.shape)
-                        text = text1 + text2 + text3 + text4
-                        Element('test-output').element.innerText =  text   
-                        #####################################################
+                #####################################################
+                text1 = str(pd_conditions_train_np.shape)
+                text2 = str(pd_imgs_np_train_np.shape)
+                text3 = str(pd_ids_train_np.shape)
+                text4 = str(test_x.shape)
+                text = text1 + text2 + text3 + text4
+                Element('test-output').element.innerText =  text   
+                #####################################################
                         
-                        generated_img = predict( test_x )
+                generated_img = predict( test_x )
                     
-                        #####################################################          
-                        test_x = test_x.astype(int)
-                        str_conditions = np.array2string(test_x, precision=0, separator=',', suppress_small=True)
-                        str_conditions = str_conditions.replace(" ","")
-                        str_conditions = str_conditions.replace("[","")
-                        str_conditions = str_conditions.replace("]","")
-                        #####################################################
+                #####################################################          
+                test_x = test_x.astype(int)
+                str_conditions = np.array2string(test_x, precision=0, separator=',', suppress_small=True)
+                str_conditions = str_conditions.replace(" ","")
+                str_conditions = str_conditions.replace("[","")
+                str_conditions = str_conditions.replace("]","")
+                #####################################################
 
-                        fig1, ax1 = plt.subplots()
-                        plt.imshow(generated_img)                                     ##, cmap='summer')
-                        plt.colorbar(label="Colorbar", orientation="vertical")
-                        ax1.set_title(str_conditions)
+                fig1, ax1 = plt.subplots()
+                plt.imshow(generated_img)                                     ##, cmap='summer')
+                plt.colorbar(label="Colorbar", orientation="vertical")
+                ax1.set_title(str_conditions)
 
-                        ## Element('mpl').element.innerText = ""        ## use this to not accumulate imgs
-                        display(fig1, target="mpl")
+                ## Element('mpl').element.innerText = ""        ## use this to not accumulate imgs
+                display(fig1, target="mpl")
                     
-                        #####################################################
-
-                        ## fig, ax = plt.subplots(1,2)
-                        ## ax[0].imshow(generated_img)
-                        ## ax[1].imshow(generated_img)
-                        ## ax[0].set_title("Gen: " + str_conditions)
-                        ## ax[1].set_title("real")
-                        ## Element('mpl').element.innerText = ""        ## use this to not accumulate imgs
-                        ## display(fig, target="mpl")
+                
             
         </script>
     </section>
